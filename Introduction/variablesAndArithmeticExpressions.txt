@@ -1,0 +1,47 @@
+Check the program fahr.c
+The line:
+/*print Fahrenheit-Celsius table */
+is a comment.
+
+In C, all variables must be declared before they are used, usually at the beginning 
+of the function before any executable statements. A declaration announces the properties
+of variables; it consists of a name and a list of variables.
+
+The while loop operates as follows: The condition in parentheses is tested. 
+If it is true (fahr is less than or equal to upper), the body of the loop 
+(the three statements enclosed in braces) is executed.
+
+When the test becomes false (fahr exceeds upper) the loop ends, and execution 
+continues at the statement that follows the loop.
+
+Note that in C, integer division truncates: any fractional part is discarded. 
+So having 5/9 in the formula (line 14) would have resulted in 0 due to truncation.
+
+ printf("%d\t%d\n", fahr, celsius);
+
+ causes the values of the 2 integers fahr and celsius to be printed with a tab (\t)
+ between them.
+
+printf is not part of the C language; there is no input or output defined in C 
+itself. printf is just a useful function from the standard library of functions 
+that are normally accessible to C programs. The behaviour of printf is defined in
+the ANSI standard, however, so its properties should be the same with any compiler
+and library that conforms to the standard.
+
+Check the program fahr2.c 
+Now fahr and celsius are declared as float. 
+
+Writing floating-point constants with explicit decimal points even when they 
+have integral values emphasizes their floating-point nature for human readers.
+
+%d              print as decimal integer
+%6d             print as decimal integer, at least 6 characters wide
+%f              print as floating point
+%6f             print as floating point, at least 6 characters wide
+%.2f            print as floating point, 2 characters after decimal point
+%6.2f           print as floating point, at least 6 wide and 2 after decimal point.
+
+
+Among others, printf also recognizes %o for octal, %x for hexadecimal, 
+%c for character, %s for character string and %% for itself.
+
