@@ -1,0 +1,25 @@
+See program arrays.c
+
+The declaration
+
+ int ndigit [10];
+
+declares ndigit to be an array of 10 integers. Arrays subscripts always start at zero in C.
+
+This particular program relies on the properties of the character representation 
+of the digits. For example, the test
+
+if (c >= '0' && c <= '9')
+
+determines whether the character c is a digit. If it is the numeric value of that
+digit is
+c - '0'
+This works only if '0', '1', ..., '9' have consecutive increasing values. 
+Fortunately, this is true for all character sets.
+
+By definition, chars are just small integers, so char variables and constants are 
+identical to ints in arithmetic expressions. This is natural and convenient; for 
+example c-'0' is an integer expression with a value between 0 and 9 corresponding 
+to the character '0' to '9' stored in c, and thus a valid subscript for the array 
+ndigit.
+
